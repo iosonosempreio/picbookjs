@@ -24,6 +24,11 @@
     "url": "https://github.com/henriquea/picbookjs/issues"
   },
   "devDependencies": {
-    "nodeunit": "~0.8.6"
+    "bower": "~1.2.8",
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.0",
+    "load-grunt-tasks": "~0.2.0",
+    "time-grunt": "~0.2.0",
+    "jshint-stylish": "~0.1.3"
   }
 }
