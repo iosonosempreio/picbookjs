@@ -1,10 +1,11 @@
-'use strict';
-
 var _picbookOptions = null;
 
 var picbookJs = (function(document){
 
+  'use strict';
+
   function picbookJs(options) {
+    /*jslint validthis: true */
     this.options = this._merge(this._options, options);
     this.init();
     _picbookOptions = this.options;
