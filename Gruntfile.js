@@ -10,22 +10,17 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     jshint: {
-
       options: {
         jshintrc: '.jshintrc',
         reporter: require('jshint-stylish')
       },
-
       gruntfile: {
         src: 'Gruntfile.js'
       },
-
       lib: {
         src: ['picbook.js']
       }
-
     }
-
   });
 
   grunt.registerTask('default', ['jshint']);
