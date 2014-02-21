@@ -2,11 +2,11 @@
 
 var _picbookOptions = null;
 
-window.picbook = (function(document){
+var picbook = (function(document){
 
   function picbook(options) {
     this.options = this._merge(this._options, options);
-    this._init();
+    this.init();
     _picbookOptions = this.options;
   }
 
@@ -21,15 +21,15 @@ window.picbook = (function(document){
       limit: 15,
     },
 
-    _init: function() {
+    init: function() {
       this.loaded = false;
-      this._fetch({
+      this.fetch({
         where: '',
         callback: 'picbook.prototype._albumComplete'
       });
     },
 
-    _fetch: function(params) {
+    fetch: function(params) {
       var js = document.createElement('script'),
           options = _picbookOptions || this.options,
           url = options.graph + options.id + params.where,
@@ -39,7 +39,7 @@ window.picbook = (function(document){
       js.async = true;
 
       if (params.where.match(/photos/)) {
-        // photos – add limit parameter
+        // Retrieve photos, add limit parameter
         js.src = url + '?limit=' + options.limit + '&callback=' + params.callback;
       } else {
         js.src = url + '?callback=' + params.callback;
@@ -50,12 +50,18 @@ window.picbook = (function(document){
     },
 
     _albumComplete: function(response) {
+
+      var options = _picbookOptions || this.options;
       this.album = response;
       this.count = response.count;
-      this._fetch({
+      this.fetch({
         where: '/photos',
         callback: 'picbook.prototype._photosComplete'
       });
+
+      if (typeof options.albumLoaded === 'function') {
+        options.albumLoaded();
+      }
     },
 
     _photosComplete: function(response) {
