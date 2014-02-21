@@ -2,15 +2,15 @@
 
 var _picbookOptions = null;
 
-var picbook = (function(document){
+var picbookJs = (function(document){
 
-  function picbook(options) {
+  function picbookJs(options) {
     this.options = this._merge(this._options, options);
     this.init();
     _picbookOptions = this.options;
   }
 
-  picbook.prototype = {
+  picbookJs.prototype = {
 
     count: 0,
 
@@ -25,7 +25,7 @@ var picbook = (function(document){
       this.loaded = false;
       this.fetch({
         where: '',
-        callback: 'picbook.prototype._albumComplete'
+        callback: 'picbookJs.prototype._albumComplete'
       });
     },
 
@@ -56,7 +56,7 @@ var picbook = (function(document){
       this.count = response.count;
       this.fetch({
         where: '/photos',
-        callback: 'picbook.prototype._photosComplete'
+        callback: 'picbookJs.prototype._photosComplete'
       });
 
       if (typeof options.albumLoaded === 'function') {
@@ -70,8 +70,8 @@ var picbook = (function(document){
       this.photos = response.data;
       this.loaded = true;
 
-      if (typeof options.callback  === 'function') {
-        options.callback();
+      if (typeof options.photosLoaded  === 'function') {
+        options.photosLoaded();
       }
 
     },
@@ -87,6 +87,6 @@ var picbook = (function(document){
 
   };
 
-  return picbook;
+  return picbookJs;
 
 })(document);
