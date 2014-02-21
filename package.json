@@ -1,0 +1,29 @@
+{
+  "name": "picbookjs",
+  "version": "0.0.1",
+  "description": "A simple Javascript library to display album photos from a Facebook Page",
+  "main": "picbook.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/henriquea/picbookjs.git"
+  },
+  "keywords": [
+    "facebook",
+    "album",
+    "photo"
+  ],
+  "author": "Henrique Alves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/henriquea/picbookjs/issues"
+  },
+  "devDependencies": {
+    "nodeunit": "~0.8.6"
+  }
+}
