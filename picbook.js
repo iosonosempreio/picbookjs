@@ -19,32 +19,40 @@ var picbookJs = (function(document){
 
     _options: {
       graph: 'https://graph.facebook.com/',
-      limit: 15,
+      limit: 10,
     },
 
     init: function() {
       this.loaded = false;
-      this.fetch({
-        where: '',
+      this.getAlbum({
         callback: 'picbookJs.prototype._albumComplete'
       });
     },
 
-    fetch: function(params) {
+    getAlbum: function(params) {
       var js = document.createElement('script'),
           options = _picbookOptions || this.options,
-          url = options.graph + options.albumId + params.where,
+          url = options.graph + options.albumId,
           s;
 
       js.type = 'text/javascript';
       js.async = true;
+      js.src = url + '?callback=' + params.callback;
 
-      if (params.where.match(/photos/)) {
-        // Retrieve photos, add limit parameter
-        js.src = url + '?limit=' + options.limit + '&callback=' + params.callback;
-      } else {
-        js.src = url + '?callback=' + params.callback;
-      }
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(js, s.nextSibling);
+    },
+
+    // TODO: adpated the method for paging the data
+    getPhotos: function(params) {
+      var js = document.createElement('script'),
+          options = _picbookOptions || this.options,
+          url = options.graph + options.albumId + '/photos',
+          s;
+
+      js.type = 'text/javascript';
+      js.async = true;
+      js.src = url + '?limit=' + options.limit + '&callback=' + params.callback;
 
       s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(js, s.nextSibling);
@@ -55,8 +63,7 @@ var picbookJs = (function(document){
       var options = _picbookOptions || this.options;
       this.album = response;
       this.count = response.count;
-      this.fetch({
-        where: '/photos',
+      this.getPhotos({
         callback: 'picbookJs.prototype._photosComplete'
       });
 
