@@ -1,3 +1,5 @@
+'use strict';
+
 var picbook = {
     id: undefined,
     album: undefined,
@@ -16,7 +18,7 @@ var picbook = {
     },
 
     fetch: function(url, isAsync, callback) {
-        var js = document.createElement('script'); 
+        var js = document.createElement('script');
         js.type = 'text/javascript'; js.async = isAsync;
         js.src = url + '?limit=' + this.limit +'&callback=' + callback;
         var s = document.getElementsByTagName('script')[0];
@@ -33,13 +35,5 @@ var picbook = {
         this.photos = response.data;
         if (typeof this.cb  === 'function') this.cb();
         this.loaded = true;
-    },
-
-    format: function(time) {
-        var d = new Date(time.split('+')[0]);
-            day = d.getDate() < 10 ? '0' + d.getDate() : d.getDate();
-            month = (d.getMonth()+1) < 10 ? '0' + (d.getMonth()+1) : (d.getMonth()+1);
-            year = d.getFullYear();
-        return day + '/' + month + '/' + year;
     }
 };
