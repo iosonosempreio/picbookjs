@@ -33,7 +33,7 @@ var picbookJs = (function(document){
     fetch: function(params) {
       var js = document.createElement('script'),
           options = _picbookOptions || this.options,
-          url = options.graph + options.id + params.where,
+          url = options.graph + options.albumId + params.where,
           s;
 
       js.type = 'text/javascript';
