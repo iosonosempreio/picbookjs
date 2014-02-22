@@ -9,8 +9,7 @@ The library was made because we wanted to easily "embed" photos from a Facebook 
 
 ## Installation
 
-- [Download](#) ZIP
-- Using Bower: `bower install picbookjs`
+- [Download](https://github.com/henriquea/picbookjs/archive/master.zip) ZIP
 
 ## Getting Started
 
@@ -18,11 +17,11 @@ This is the simple way to get the ball rolling.
 
 ### Basic usage
 
-Include the `picbook.min.js` before the `</body>` tag. Then initialise the library:
+Include the `picbook.js` before the `</body>` tag. Then initialise the library:
 
 ```html
 <div class="picbook"></div>
-<script type="text/javascript" src="picbook.min.js"></script>
+<script type="text/javascript" src="picbook.js"></script>
 <script type="text/javascript">
   (function($)){
     var picbook = new picbookJs({
@@ -38,10 +37,10 @@ Those are the options avaliable when you initialise the library:
 
 | Parameter         | Description                                                            |
 | ----------------- | ---------------------------------------------------------------------- |
-| **albumId**       | The Facebook album ID (required)                                       |
-| **albumLoaded**   | Provide a callback as soon the album is loaded.                        |
-| **photosLoaded**  | Callback a function when the photos are loaded.                        |
-| **limit**         | Number of photos to be loaded. The maximum allower by Facebook is 100. |
+| _albumId_         | The Facebook album ID (required)                                       |
+| _albumLoaded_     | Provide a callback as soon the album is loaded.                        |
+| _photosLoaded_    | Callback a function when the photos are loaded.                        |
+| _limit_           | Number of photos to be loaded. The maximum allower by Facebook is 100. |
 
 Example:
 
