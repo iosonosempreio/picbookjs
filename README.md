@@ -1,3 +1,6 @@
+picbookJs
+===
+
 A simple Javascript library to display album photos from a Facebook Page.
 
 ## Quick History
@@ -79,7 +82,7 @@ This is in my _TODO_ list. For now you can set a `limit` to 100 (maximum allowed
 
 ## Contributing
 
-Please, [open issues](https://github.com/henriquea/picbookjs/issues) to make questions or suggest improvements. You're very welcome.
+Please [open issues](https://github.com/henriquea/picbookjs/issues) for make questions or suggest improvements. You're very welcome.
 
 ## License
 
