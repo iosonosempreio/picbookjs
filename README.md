@@ -20,8 +20,11 @@ This is the simple way to get the ball rolling.
 Include the `picbook.js` before the `</body>` tag. Then initialise the library:
 
 ```html
+
 <div class="picbook"></div>
+
 <script type="text/javascript" src="picbook.js"></script>
+
 <script type="text/javascript">
   (function($)){
     var picbook = new picbookJs({
@@ -29,6 +32,7 @@ Include the `picbook.js` before the `</body>` tag. Then initialise the library:
     });
   })(jQuery);
 </script>
+
 ```
 
 ### Options
@@ -45,13 +49,16 @@ Those are the options avaliable when you initialise the library:
 Example:
 
 ```javascript
+
 var options = {
   albumId: '10150167782373951',
   limit: 10,
   albumLoaded: function() { /* do something */ },
   photosLoaded: function() { /* do something else */ }
 };
+
 var picbook = new picbookJs(options);
+
 ```
 
 ## Questions
