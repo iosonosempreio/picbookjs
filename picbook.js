@@ -78,6 +78,7 @@ var picbookJs = (function(document){
 
     },
 
+    // https://developers.facebook.com/docs/reference/api/album
     albumComplete: function(response) {
 
       var options = _picbookOptions || this.options;
@@ -96,6 +97,7 @@ var picbookJs = (function(document){
 
     },
 
+    // https://developers.facebook.com/docs/graph-api/reference/photo
     photosComplete: function(response) {
 
       var options = _picbookOptions || this.options;
@@ -112,14 +114,21 @@ var picbookJs = (function(document){
 
     createPhotos: function() {
 
-      var i, len, photo, li, imgHtml;
+      var arrUrl = [], imgSrc, i, len, image, li;
+
       for (i=0, len = this.photos.length; i < len; i++) {
-        photo = this.photos[i];
+
+        image = this.photos[i].images[0];
         li = document.createElement('li');
-        imgHtml = '<img src="image_path">';
         li.classList.add('photo-list-item');
         this.dom.photos.appendChild(li);
-        li.innerHTML = imgHtml.replace(/image_path/gi, this.photos[i].images[3].source);
+
+        arrUrl = image.source.split('/').splice(0);
+        arrUrl.splice(5,0,'p206x206');
+        imgSrc = arrUrl.join('/');
+
+        li.innerHTML = '<img src="' + imgSrc +'">';
+
       }
 
     },
