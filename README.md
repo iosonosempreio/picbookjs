@@ -17,12 +17,12 @@ This is the simple way to get the ball rolling.
 
 ### Basic usage
 
-Include the `picbook.js` before the `</body>` tag. Then initialise the library:
+Include the `picbook.min.js` before the `</body>` tag. Then initialise the library:
 
 ```html
 <div class="picbook"></div>
 
-<script type="text/javascript" src="picbook.js"></script>
+<script type="text/javascript" src="picbook.min.js"></script>
 
 <script type="text/javascript">
   (function($)){
