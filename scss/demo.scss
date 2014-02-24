@@ -1,0 +1,35 @@
+@import "base";
+
+h1 {
+  margin: 0;
+  padding: 0;
+  color: #B2B8C4;
+  font-size: 15px;
+  a {
+    color: #B2B8C4;
+    text-decoration: none;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
+.gh-page {
+  padding: 40px 0;
+}
+
+.picbook {
+
+  margin: 0 auto;
+  width: 848px;
+  text-align: center;
+
+  .album-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+}

@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+@import "normalize";
+
+$font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+$body-color: #7b8394;
+$main-color: #688fe1;
+$secondary-color: #c591dc;
+$third-color: #70d38c;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: 300 100%/1.4em $font-family;
+  color: $body-color;
+}
+
+a {
+  transition: all 399ms ease;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+  color: #688fe1;
+}

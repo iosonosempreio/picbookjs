@@ -1,6 +1,73 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,700);
-@import "normalize";
+@import "base";
 
-body {
-  font: 400 100%/1.4em 'Open Sans', 'Helvetica Neue', sans-serif;
+.gh-page {
+
+  display: flex;
+  height: auto;
+  min-height: 34em;
+  padding: 40px 0;
+
+  .container {
+    margin: auto;
+  }
+
+  .buttons {
+
+    text-align: center;
+
+    .button {
+
+      margin-right: 12px;
+      display: inline-block;
+      border-radius: 4px;
+      border: solid 2px $secondary-color;
+      padding: 8px 26px;
+      text-align: center;
+      color: $secondary-color;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+
+      &:hover {
+        border-color: $main-color;
+        color: $main-color;
+      }
+
+    }
+
+  }
+
+  .foo {
+
+    .link {
+
+      width: 120px;
+      margin: 12px auto;
+      display: block;
+      text-align: center;
+      color: #7b8394;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+
+      &:hover {
+        color: $main-color;
+        &:after {
+          border-color: $main-color;
+          margin: 1px 24px;
+        }
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        margin: 1px 18px;
+        border-bottom: 1px solid $body-color;
+        transition: all 200ms ease;
+      }
+
+    }
+
+  }
+
 }

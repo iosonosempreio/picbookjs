@@ -178,46 +178,27 @@ h1 {
   text-align: center;
   color: #688fe1; }
 
+h1 {
+  margin: 0;
+  padding: 0;
+  color: #B2B8C4;
+  font-size: 15px; }
+h1 a {
+  color: #B2B8C4;
+  text-decoration: none; }
+h1 a:hover {
+  color: #688fe1; }
+
 .gh-page {
-  display: flex;
-  height: auto;
-  min-height: 34em;
   padding: 40px 0; }
-.gh-page .container {
-  margin: auto; }
-.gh-page .buttons {
+
+.picbook {
+  margin: 0 auto;
+  width: 848px;
   text-align: center; }
-.gh-page .buttons .button {
-  margin-right: 12px;
-  display: inline-block;
-  border-radius: 4px;
-  border: solid 2px #c591dc;
-  padding: 8px 26px;
-  text-align: center;
-  color: #c591dc;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600; }
-.gh-page .buttons .button:hover {
-  border-color: #688fe1;
-  color: #688fe1; }
-.gh-page .foo .link {
-  width: 120px;
-  margin: 12px auto;
-  display: block;
-  text-align: center;
-  color: #7b8394;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 400; }
-.gh-page .foo .link:hover {
-  color: #688fe1; }
-.gh-page .foo .link:hover:after {
-  border-color: #688fe1;
-  margin: 1px 24px; }
-.gh-page .foo .link:after {
-  content: "";
-  display: block;
-  margin: 1px 18px;
-  border-bottom: 1px solid #7b8394;
-  transition: all 200ms ease; }
+.picbook .album-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px; }
