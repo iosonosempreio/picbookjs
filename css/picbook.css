@@ -1,7 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,700);
-.picbook {
-  font: 400 100%/1.4em 'Open Sans', 'Helvetica Neue', sans-serif;
-}
 .picbook .album-title {
   font-size: 1.6em;
   font-weight: 300;
@@ -12,14 +8,20 @@
 }
 .picbook .photo-list .photo-list-item {
   list-style-type: none;
+  display: inline-block;
+}
+.picbook .photo-list .photo-list-item .item-thumb {
+  cursor: pointer;
+  display: block;
   margin: 3px;
   width: 206px;
   height: 206px;
-  display: inline-block;
   background-size: cover;
   background-position: 50% 25%;
-  -webkit-transition-property: width, height, opacity;
-  -webkit-transition-duration: 500ms;
-  opacity: .9;
+  transition: all 199ms ease;
+  opacity: .75;
   vertical-align: top;
+}
+.picbook .photo-list .photo-list-item .item-thumb:hover {
+  opacity: 1;
 }

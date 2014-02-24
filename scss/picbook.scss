@@ -1,12 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,700);
-
 $thumb-margin: 3px;
 $thumb-width: 206px;
 $thumb-height: 206px;
 
 .picbook {
-
-  font: 400 100%/1.4em 'Open Sans', 'Helvetica Neue', sans-serif;
 
   .album-title {
     font-size: 1.6em;
@@ -14,21 +10,33 @@ $thumb-height: 206px;
   }
 
   .photo-list {
+
     padding: 0;
     margin: 0;
 
     .photo-list-item {
+
       list-style-type: none;
-      margin: $thumb-margin;
-      width: $thumb-width;
-      height: $thumb-height;
       display: inline-block;
-      background-size: cover;
-      background-position: 50% 25%;
-      -webkit-transition-property: width, height, opacity;
-      -webkit-transition-duration: 500ms;
-      opacity: .9;
-      vertical-align: top;
+
+      .item-thumb {
+        cursor: pointer;
+        display: block;
+        margin: $thumb-margin;
+        width: $thumb-width;
+        height: $thumb-height;
+        background-size: cover;
+        background-position: 50% 25%;
+        transition: all 199ms ease;
+        opacity: .75;
+        vertical-align: top;
+
+        &:hover {
+          opacity: 1;
+        }
+
+      }
+
     }
 
   }

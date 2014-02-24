@@ -114,7 +114,7 @@ var picbookJs = (function(document){
 
     createPhotos: function() {
 
-      var arrUrl = [], imgSrc, i, len, image, li;
+      var arrUrl = [], imgSrc, i, len, image, li, a, link;
 
       for (i=0, len = this.photos.length; i < len; i++) {
 
@@ -123,16 +123,20 @@ var picbookJs = (function(document){
         // Check if photo has public permission
         if (!image.source.match(/oh=/)) {
 
+          link = this.photos[i].link.replace(/graph.facebook/gi, 'www.facebook');
           li = document.createElement('li');
+          a = document.createElement('a');
           li.classList.add('photo-list-item');
           this.dom.photos.appendChild(li);
+          li.appendChild(a);
+          a.classList.add('item-thumb');
 
           arrUrl = image.source.split('/').splice(0);
           arrUrl.splice(5,0,'p206x206');
           imgSrc = arrUrl.join('/');
 
-          li.setAttribute('style', 'background-image: url('+ imgSrc +')');
-
+          a.setAttribute('href', link);
+          a.setAttribute('style', 'background-image: url('+ imgSrc +')');
         }
 
       }
