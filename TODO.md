@@ -1,8 +1,6 @@
 TODO
 -------
 
-- Redesign the project page
+- Add model layer for album and photos object
 - Create one static page to retrieve the album ID from a given URL
-- Register bower package
-- Add model layer for album and photos
 - Paginating
