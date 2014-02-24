@@ -17,7 +17,7 @@ module.exports = function (grunt) {
       },
       lib: {
         files: {
-          'picbook.min.js': ['picbook.js']
+          'js/picbook.min.js': ['js/picbook.js']
         }
       }
     },
@@ -34,9 +34,10 @@ module.exports = function (grunt) {
         src: 'Gruntfile.js'
       },
       lib: {
-        src: ['picbook.js']
+        src: ['js/picbook.js']
       }
-    }
+    },
+
   });
 
   grunt.registerTask('default', ['jshint','uglify']);
