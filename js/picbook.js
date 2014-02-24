@@ -119,15 +119,21 @@ var picbookJs = (function(document){
       for (i=0, len = this.photos.length; i < len; i++) {
 
         image = this.photos[i].images[0];
-        li = document.createElement('li');
-        li.classList.add('photo-list-item');
-        this.dom.photos.appendChild(li);
 
-        arrUrl = image.source.split('/').splice(0);
-        arrUrl.splice(5,0,'p206x206');
-        imgSrc = arrUrl.join('/');
+        // Check if photo has public permission
+        if (!image.source.match(/oh=/)) {
 
-        li.innerHTML = '<img src="' + imgSrc +'">';
+          li = document.createElement('li');
+          li.classList.add('photo-list-item');
+          this.dom.photos.appendChild(li);
+
+          arrUrl = image.source.split('/').splice(0);
+          arrUrl.splice(5,0,'p206x206');
+          imgSrc = arrUrl.join('/');
+
+          li.setAttribute('style', 'background-image: url('+ imgSrc +')');
+
+        }
 
       }
 
