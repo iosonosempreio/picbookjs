@@ -59,23 +59,19 @@ var picbook = new picbookJs(options);
 
 ## Questions
 
-### Where do I get the album ID?
+#### Where do I get the album ID?
 
 Go to an album page and copy the _ID_ from the address bar URL:
 
 ![Image](http://f.cl.ly/items/2s0L3f430q2l1I11101K/fb-album-id.gif)
 
-### How about retrieve an album that belongs to a user?
+#### How about retrieve an album that belongs to a user?
 
 Not possible. The `user_photo` [permission](https://developers.facebook.com/docs/reference/login/#permissions) is required, which means you would have to create a Facebook app and implement the Facebook Login.
 
-### How about pagination?
+#### How about pagination?
 
 This is in my _TODO_ list. For now you can set a `limit` to 100 (maximum allowed by Facebook).
-
-## Contributing
-
-You're more than welcome to [open an issue](https://github.com/henriquea/picbookjs/issues), make questions or suggest improvements.
 
 ## License
 
