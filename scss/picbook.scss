@@ -27,8 +27,7 @@ $thumb-height: 206px;
       background-position: 50% 25%;
       -webkit-transition-property: width, height, opacity;
       -webkit-transition-duration: 500ms;
-      transition: opacity 499ms ease;
-      transition-delay: 3s;
+      opacity: .9;
       vertical-align: top;
     }
 
