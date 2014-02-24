@@ -18,7 +18,7 @@ This is the simple way to get the ball rolling.
 
 ### Basic usage
 
-Include the `picbook.min.js` before the `</body>` tag. Then initialise the library:
+Create a `<div class="picbook"></div>` and include the `picbook.min.js` before the `</body>` tag. Then initialise the library passing an album ID:
 
 ```html
 <div class="picbook"></div>
@@ -36,14 +36,14 @@ Include the `picbook.min.js` before the `</body>` tag. Then initialise the libra
 
 ### Options
 
-Those are the options avaliable when you initialise the library:
+The follow options are available when you initialise:
 
 | Parameter         | Description                                                            |
 | ----------------- | ---------------------------------------------------------------------- |
-| _albumId_         | The Facebook album ID (required)                                       |
-| _albumLoaded_     | Provide a callback as soon the album is loaded.                        |
-| _photosLoaded_    | Callback a function when the photos are loaded.                        |
-| _limit_           | Number of photos to be loaded. The maximum allower by Facebook is 100. |
+|  albumId          | The Facebook album ID (required)                                       |
+|  albumLoaded      | Callback a function as soon the album info is loaded                   |
+|  photosLoaded     | Callback a function when all photos are loaded                         |
+|  limit            | Number of photos to be loaded - The maximum allower by Facebook is 100 |
 
 Example:
 
@@ -72,7 +72,7 @@ Not possible. The `user_photo` [permission](https://developers.facebook.com/docs
 
 #### How about pagination?
 
-This is in my _TODO_ list. For now you can set a `limit` to 100 (maximum allowed by Facebook).
+This is in my _TODO_ list. For now you can set the `limit` to 100.
 
 ## License
 
