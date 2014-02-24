@@ -1,7 +1,26 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,700);
 .picbook {
   font: 400 100%/1.4em 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .picbook .album-title {
-  font-weight: 700;
+  font-size: 1.6em;
+  font-weight: 300;
+}
+.picbook .photo-list {
+  padding: 0;
+  margin: 0;
+}
+.picbook .photo-list .photo-list-item {
+  list-style-type: none;
+  margin: 3px;
+  width: 206px;
+  height: 206px;
+  display: inline-block;
+  background-size: cover;
+  background-position: 50% 25%;
+  -webkit-transition-property: width, height, opacity;
+  -webkit-transition-duration: 500ms;
+  transition: opacity 499ms ease;
+  transition-delay: 3s;
+  vertical-align: top;
 }
