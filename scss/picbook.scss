@@ -5,6 +5,7 @@ $thumb-height: 206px;
 .picbook {
 
   .album-title {
+    transition: opacity 200ms ease;
     font-size: 1.6em;
     font-weight: 300;
   }
@@ -20,6 +21,7 @@ $thumb-height: 206px;
       display: inline-block;
 
       .item-thumb {
+
         cursor: pointer;
         display: block;
         margin: $thumb-margin;
@@ -28,8 +30,8 @@ $thumb-height: 206px;
         background-size: cover;
         background-position: 50% 25%;
         transition: all 199ms ease;
-        opacity: .75;
         vertical-align: top;
+        opacity: .73;
 
         &:hover {
           opacity: 1;
@@ -40,4 +42,5 @@ $thumb-height: 206px;
     }
 
   }
+
 }

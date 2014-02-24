@@ -1,4 +1,5 @@
 .picbook .album-title {
+  transition: opacity 200ms ease;
   font-size: 1.6em;
   font-weight: 300;
 }
@@ -19,8 +20,8 @@
   background-size: cover;
   background-position: 50% 25%;
   transition: all 199ms ease;
-  opacity: .75;
   vertical-align: top;
+  opacity: .73;
 }
 .picbook .photo-list .photo-list-item .item-thumb:hover {
   opacity: 1;
