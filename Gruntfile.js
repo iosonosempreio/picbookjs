@@ -9,6 +9,19 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
 
+    pkg: grunt.file.readJSON('package.json'),
+
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> <%= pkg.version %> Copyright (C) 2014 <%= pkg.author %>, <%= pkg.homepage %> */\n'
+      },
+      lib: {
+        files: {
+          'picbook.min.js': ['picbook.js']
+        }
+      }
+    },
+
     jshint: {
       options: {
         reporter: require('jshint-stylish'),
@@ -26,6 +39,6 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['jshint','uglify']);
 
 };
