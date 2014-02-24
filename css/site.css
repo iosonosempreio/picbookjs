@@ -179,6 +179,7 @@ h1 {
   color: #688fe1; }
 
 .gh-page {
+  display: -webkit-flex;
   display: flex;
   height: auto;
   min-height: 34em;
