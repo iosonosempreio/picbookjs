@@ -20,6 +20,7 @@
   background-size: cover;
   background-position: 50% 25%;
   transition: all 199ms ease;
+  vertical-align: top;
   opacity: .73;
 }
 .picbook .photo-list .photo-list-item .item-thumb:hover {
