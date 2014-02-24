@@ -1,5 +1,4 @@
 .picbook .album-title {
-  transition: opacity 200ms ease;
   font-size: 1.6em;
   font-weight: 300;
 }
