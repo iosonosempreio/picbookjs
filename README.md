@@ -10,6 +10,7 @@ The library was made because we wanted to easily "embed" photos from a Facebook 
 ## Installation
 
 - [Download](https://github.com/henriquea/picbookjs/archive/master.zip) ZIP
+- Bower: `bower install picbookjs`
 
 ## Getting Started
 
