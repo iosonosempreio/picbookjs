@@ -183,7 +183,8 @@ h1 {
   display: flex;
   height: auto;
   min-height: 34em;
-  padding: 40px 0; }
+  padding: 40px 0;
+  text-align: center; }
 .gh-page .container {
   margin: auto; }
 .gh-page .buttons {
