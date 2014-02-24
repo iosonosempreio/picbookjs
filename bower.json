@@ -1,0 +1,26 @@
+{
+  "name": "picbookjs",
+  "version": "0.3.0",
+  "homepage": "http://henriquea.github.io/picbookjs/",
+  "authors": [
+    "Henrique Alves <henriquea@gmail.com>"
+  ],
+  "description": "A simple Javascript library to display album photos from a Facebook Page",
+  "main": [
+    "js/picbook.js",
+    "css/picbook.css"
+  ],
+  "keywords": [
+    "facebook",
+    "javascript",
+    "photos"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
