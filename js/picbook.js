@@ -25,6 +25,7 @@ var picbookJs = (function(document){
     _options: {
       graph: 'https://graph.facebook.com/',
       limit: 10,
+      target: '.picbook'
     },
 
     init: function() {
@@ -35,7 +36,7 @@ var picbookJs = (function(document){
       });
 
       // Setup DOM
-      this.dom.wrapper = document.querySelector('.picbook');
+      this.dom.wrapper = document.querySelector(this.options.target);
       this.dom.title = document.createElement('h3');
       this.dom.title.classList.add('album-title');
       this.dom.photos = document.createElement('ul');

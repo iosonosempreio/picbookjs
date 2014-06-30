@@ -1,6 +1,6 @@
 {
   "name": "picbookjs",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A simple Javascript library to display album photos from a Facebook Page",
   "main": "js/picbook.js",
   "directories": {

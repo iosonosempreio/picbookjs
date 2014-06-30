@@ -44,6 +44,7 @@ The follow options are available when you initialise:
 |  albumLoaded      | Callback a function as soon the album info is loaded                   |
 |  photosLoaded     | Callback a function when all photos are loaded                         |
 |  limit            | Number of photos to be loaded - The maximum allower by Facebook is 100 |
+|  target           | Element to load album into - Default is .picbook - Can be class or id  |
 
 Example:
 
@@ -51,6 +52,7 @@ Example:
 var options = {
   albumId: '10150167782373951',
   limit: 10,
+  target: '#example',
   albumLoaded: function() { /* do something */ },
   photosLoaded: function() { /* do something else */ }
 };
