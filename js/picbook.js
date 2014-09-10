@@ -133,7 +133,7 @@ var picbookJs = (function(document){
           a.classList.add('item-thumb');
 
           arrUrl = image.source.split('/').splice(0);
-          arrUrl.splice(5,0,'p206x206');
+          arrUrl.splice(5,0,'p320x320');
           imgSrc = arrUrl.join('/');
 
           a.setAttribute('href', link);
